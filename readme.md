@@ -1,4 +1,4 @@
-# 🐍 Proyecto Final: Snake Game con Agente de Desarrollo (AI for Devs)
+# 🐍 ejercicio Snake Game con Agente de Desarrollo (AI for Devs)
 
 ¡Bienvenido/a al desafío de desarrollo guiado por IA!
 

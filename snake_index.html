@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Game - ES6 Edition</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <!-- MENU SCREEN -->
+  <div id="menu-screen" class="screen active">
+    <div class="container">
+      <h1>🐍 SNAKE GAME</h1>
+      <button id="btn-start" class="btn-primary">JUGAR</button>
+      <div id="top-scores" class="scores-container">
+        <h2>🏆 TOP 10</h2>
+        <table id="scores-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nombre</th>
+              <th>Puntos</th>
+              <th>Fecha</th>
+            </tr>
+          </thead>
+          <tbody id="scores-body">
+            <!-- Poblado dinámicamente -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAME SCREEN -->
+  <div id="game-screen" class="screen hidden">
+    <div class="game-container">
+      <div id="hud" class="hud">
+        <div class="hud-item">
+          <span class="hud-label">Puntos:</span>
+          <span id="current-score" class="hud-value">0</span>
+        </div>
+        <div class="hud-item">
+          <span class="hud-label">Velocidad:</span>
+          <span id="current-speed" class="hud-value">150ms</span>
+        </div>
+      </div>
+      <canvas id="game-canvas"></canvas>
+    </div>
+  </div>
+
+  <!-- GAMEOVER SCREEN -->
+  <div id="gameover-screen" class="screen hidden">
+    <div class="container">
+      <h1>💀 GAME OVER</h1>
+      <div id="final-score-display" class="final-score">
+        <p>Puntuación Final: <span id="final-score">0</span></p>
+      </div>
+      <div id="name-input-container" class="name-input-container hidden">
+        <p>¡Nuevo récord! Ingresa tu nombre:</p>
+        <input 
+          type="text" 
+          id="player-name-input" 
+          maxlength="3" 
+          placeholder="AAA"
+          pattern="[A-Z]{3}"
+          class="name-input"
+        />
+        <button id="btn-save-score" class="btn-primary">GUARDAR</button>
+      </div>
+      <div class="button-group">
+        <button id="btn-restart" class="btn-secondary">REINTENTAR</button>
+        <button id="btn-menu" class="btn-secondary">MENÚ</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
